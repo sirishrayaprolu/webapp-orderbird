@@ -1,4 +1,0 @@
-# use this file to install local dependecies via: pip install -r all_requirements.txt
-
-#layers
--r layers/deployment/requirements.txt
