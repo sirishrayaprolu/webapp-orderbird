@@ -21,4 +21,7 @@ pip install sceptre
 * Install any code editor
 * Install the [Docker](https://www.docker.com/products/docker-desktop/)
 
-
+## Task before running any builds/tests locally
+```
+docker login
+```
