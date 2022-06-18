@@ -17,5 +17,6 @@ pip install sceptre
   Note: Check the box "Add to Path" during installation.
 * Install [SAM CLI and docker](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
 * Install any code editor
+* Install the Docker(https://www.docker.com/products/docker-desktop/)
 
 
