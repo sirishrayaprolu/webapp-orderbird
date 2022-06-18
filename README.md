@@ -11,3 +11,11 @@ virtualenv cns_venv
 source cns_venv/Scripts/activate
 pip install sceptre
 ```
+### Additional tools
+* Install [Git Bash](https://gitforwindows.org/)
+* Install [Python](https://www.python.org/downloads/)  
+  Note: Check the box "Add to Path" during installation.
+* Install [SAM CLI and docker](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
+* Install any code editor
+
+
