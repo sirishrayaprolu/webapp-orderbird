@@ -2,17 +2,17 @@
 <head>
 <title>Sample Web App</title>
 
-<script src="/templates/Storage.js"></script>
-<link rel="stylesheet" href="/templates/Styles.css">
+<script src="/static/storage.js"></script>
+<link rel="stylesheet" href="/static/styles.css">
 </head>
 
 
-<body onload="doShowAll()">
+<body onload="doShowAll()" bgcolor="lightblue"><center>
 	<h2></h2>
 	<p>Insert items and quantity for your shopping cart. </p>
-	<form name=ShoppingList>
+	<center><form name=ShoppingList>
 
-		<div id="main">
+		<center><div id="main">
 			<table>
 				<tr>
 
@@ -29,7 +29,7 @@
 					</td>
 				</tr>
 			</table>
-		</div>
+		</div></center>
 
 		<div id="items_table">
 			<h3>Shopping List</h3>
@@ -39,7 +39,7 @@
 					<i>* Delete all items</i></label>
 			</p>
 		</div>
-	</form>
+	</form></center>
 
-</body>
+</center></body>
 </html>
