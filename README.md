@@ -35,16 +35,6 @@ pip install sceptre
 
 ### Creating EC2 instance for jenkins and docker
 
-We can create the EC2 instance either by cloudformation or by step by step process
-
-* Run the command it will install the jenkins and docker in the EC2
-
-```
-Need to provide the YAML script
-```
-
-### Step-By-Step process for the EC2 instance along with jenkins and docker
-
 * Create a EC2 instance from the [AWS EC2](https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#Home) console.
 * Enable the ```Auto-assign Public IP``` to ```Enable``` (where we need to connect jenkines with this IP address)
 * Create an IAM role "ECRfullaccessEC2" (storing the docker images in the ECR)for EC2 service and assign to it.
