@@ -136,6 +136,6 @@ Jenkins is now installed and running on your EC2 instance. To configure Jenkins:
   
 # To configure jenkins pipeline 
 
-Please download the documentation.docx file from ```docs``` dir
+Please download the jenkins.docx file from ```docs``` dir
 
 
