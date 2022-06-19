@@ -4,7 +4,7 @@
 
 Displays the web application (index.html) run by the python flask.
 
-![flow.jpeg](docs/flow.jpeg)
+![flow_diagram.jpeg](docs/flow_diagram.jpeg)
 
 
 ## Prerequisites
