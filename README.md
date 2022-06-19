@@ -6,6 +6,8 @@ Displays the web application (index.html) running through the python flask. Jenk
 
 ![architecture.jpeg](docs/architecture.jpeg)
 
+### Documentation
+All the code and configure documents located under ```Docs``` dir
 
 ## Prerequisites
 install all dependencies from the terminal, run the commands below
