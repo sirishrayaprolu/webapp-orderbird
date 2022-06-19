@@ -2,7 +2,7 @@
 
 ### project:
 
-Displays the web application (index.html) run by the python flask. Once the code changes done, we push the changes to the [git repo](https://github.com/sirishrayaprolu/webapp-orderbird.git).
+Displays the web application (index.html) run by the python flask.
 
 ![flow.jpg](docs/flow.jpeg)
 
