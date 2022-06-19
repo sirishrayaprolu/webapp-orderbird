@@ -2,9 +2,9 @@
 
 ### project:
 
-Displays the web application (index.html) run by the python flask.
+Displays the web application (index.html) running through the python flask. Jenkins takes the latest code commits and builds the docker image and saved into a ECR (Amazon Elastic Container Registry). And we are deploying a docker container with ECS and Fargate.
 
-![flow_diagram.jpeg](docs/flow_diagram.jpeg)
+![architecture.jpeg](docs/architecture.jpeg)
 
 
 ## Prerequisites
