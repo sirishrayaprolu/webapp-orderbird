@@ -6,6 +6,7 @@ phases:
       - REPOSITORY_URI=$ecr_uri
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
+      - AWS_ACCOUNT_ID=$aws_account_id
   build:
     commands:
       - echo Build started on `date`
@@ -17,7 +18,7 @@ phases:
       - echo Build completed on `date`
       - echo Logging in to Amazon ECR...
       - aws --version
-      - aws ecr get-login-password --region region | docker login --username AWS --password-stdin $aws_account_id.dkr.ecr.region.amazonaws.com
+      - aws ecr get-login-password --region region | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.region.amazonaws.com
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
