@@ -3,7 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - REPOSITORY_URI=$ecr_uri
+      - REPOSITORY_URI=242515660052.dkr.ecr.us-east-1.amazonaws.com/sirishdemo
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
       - AWS_ACCOUNT_ID=242515660052
@@ -12,18 +12,17 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t $REPOSITORY_URI:latest .
-      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+      - docker build -t sirishdemo .
+      - docker tag sirishdemo:latest 242515660052.dkr.ecr.us-east-1.amazonaws.com/sirishdemo:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Logging in to Amazon ECR...
       - aws --version
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 242515660052.dkr.ecr.$REGION.amazonaws.com
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 242515660052.dkr.ecr.us-east-1.amazonaws.com
       - echo Pushing the Docker images...
-      - docker push $REPOSITORY_URI:latest
-      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - docker push 242515660052.dkr.ecr.us-east-1.amazonaws.com/sirishdemo:latest
       - echo Writing image definitions file...
-      - printf '[{"name":"'$ecs_container_name'","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"'$ecs_container_name'","imageUri":"%s"}]' 242515660052.dkr.ecr.us-east-1.amazonaws.com/sirishdemo:sirishimage > imagedefinitions.json
 artifacts:
     files: imagedefinitions.json
